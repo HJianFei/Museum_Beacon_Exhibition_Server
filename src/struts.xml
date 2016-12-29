@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.objectFactory.spring.autoWire.alwaysRespect"
+		value="true" />
+	<constant name="struts.devMode" value="true" />
+
+	<package name="beaconsys" extends="struts-default,json-default"
+		namespace="/">
+		<!-- Beacon -->
+		<action name="beacon" class="com.hjf.beacon.action.BeaconAction">
+			<result name="beacon">info_beacon.jsp</result>
+		</action>
+		<!-- Cultural -->
+		<action name="cultural" class="com.hjf.beacon.action.CulturalAction">
+			<result name="cultural">info_cultural.jsp</result>
+		</action>
+		<!-- ViewPager -->
+		<action name="viewPager" class="com.hjf.beacon.action.ViewPagerAction">
+			<result name="viewPager">info_cultural.jsp</result>
+		</action>
+		<!-- Appreciate -->
+		<action name="appreciate" class="com.hjf.beacon.action.AppreciateAction">
+			<result name="appreciate">info_appreciate.jsp</result>
+		</action>
+		<!-- AppreciateDetail -->
+		<action name="appreciateDetail" class="com.hjf.beacon.action.AppreciateDetailAction">
+			<result name="appreciateDetail">info_appreciateDetail.jsp</result>
+		</action>
+		<!-- Exhibition -->
+		<action name="exhibition" class="com.hjf.beacon.action.ExhibitionAction">
+			<result name="exhibition">info_exhibition.jsp</result>
+		</action>
+		<!-- ExhibitionDetail -->
+		<action name="exhibitionDetail" class="com.hjf.beacon.action.ExhibitionDetailAction">
+			<result name="exhibitionDetail">info_exhibitionDetail.jsp</result>
+		</action>
+		<!-- Education -->
+		<action name="education" class="com.hjf.beacon.action.EducationAction">
+			<result name="education">info_education.jsp</result>
+		</action>
+		<!-- EducationDetail -->
+		<action name="educationDetail" class="com.hjf.beacon.action.EducationDetailAction">
+			<result name="educationDetail">info_education.jsp</result>
+		</action>
+		<!-- NavigationInfo -->
+		<action name="navigationInfo" class="com.hjf.beacon.action.NavigationInfoAction">
+			<result name="navigationInfo">info_navigation.jsp</result>
+		</action>
+		<!-- Museum -->
+		<action name="museum" class="com.hjf.beacon.action.MuseumAction">
+			<result name="museum">info_museum.jsp</result>
+		</action>
+		<!-- MuseumDetail-->
+		<action name="museumDetail" class="com.hjf.beacon.action.MuseumDetailAction">
+			<result name="museum">info_museum_detail.jsp</result>
+		</action>
+		<!-- User-->
+		<action name="user" class="com.hjf.beacon.action.UserAction">
+			<result name="user">info_user.jsp</result>
+		</action>
+		<!-- Collection-->
+		<action name="collection" class="com.hjf.beacon.action.CollectionAction">
+			<result name="user">info_collection.jsp</result>
+		</action>
+		<!-- Update-->
+		<action name="update" class="com.hjf.beacon.action.UpdateAction">
+			<result name="user">info_app_update.jsp</result>
+		</action>
+		<!-- FeedBack-->
+		<action name="feed_back" class="com.hjf.beacon.action.FeedBackAction">
+			<result name="feed_back">info_feed_back.jsp</result>
+		</action>
+		<!-- StepView-->
+		<action name="stepView" class="com.hjf.beacon.action.StepViewAction">
+			<result name="stepView">info_step_view.jsp</result>
+		</action>
+		<!-- BeaconAppreciate-->
+		<action name="beaconAppreciate" class="com.hjf.beacon.action.BeaconAppreciateAction">
+			<result name="beaconAppreciate">info_step_view.jsp</result>
+		</action>
+		<!-- ChinaDynasty-->
+		<action name="chinaDynasty" class="com.hjf.beacon.action.ChinaDynastyAction">
+			<result name="chinaDynasty">info_step_view.jsp</result>
+		</action>
+		<!-- ChinaHistoryBigThing-->
+		<action name="chinaHistoryBigThing" class="com.hjf.beacon.action.ChinaHistoryBigThingAction">
+			<result name="chinaHistoryBigThing">info_step_view.jsp</result>
+		</action>
+		<!-- ChinaHistoryBigThingDetail-->
+		<action name="chinaHistoryBigThingDetail" class="com.hjf.beacon.action.ChinaHistoryBigThingDetailAction">
+			<result name="chinaHistoryBigThingDetail">info_step_view.jsp</result>
+		</action>
+		<!-- ChinaHistoryPeople-->
+		<action name="chinaHistoryPeople" class="com.hjf.beacon.action.ChinaHistoryPeopleAction">
+			<result name="chinaHistorypeople">info_step_view.jsp</result>
+		</action>
+		<!-- ChinaHistoryPeopleDetail-->
+		<action name="chinaHistoryPeopleDetail" class="com.hjf.beacon.action.ChinaHistoryPeopleDetailAction">
+			<result name="chinaHistoryPeopleDetail">info_step_view.jsp</result>
+		</action>
+		<!-- ChinaHistoryHistory-->
+		<action name="chinaHistoryHistory" class="com.hjf.beacon.action.ChinaHistoryHistoryAction">
+			<result name="chinaHistoryHistory">info_step_view.jsp</result>
+		</action>
+		<!-- ChinaHistoryHistoryDetail-->
+		<action name="chinaHistoryHistoryDetail" class="com.hjf.beacon.action.ChinaHistoryHistoryDetailAction">
+			<result name="chinaHistoryHistoryDetail">info_step_view.jsp</result>
+		</action>
+		<!-- ChinaHistoryCulture-->
+		<action name="chinaHistoryCulture" class="com.hjf.beacon.action.ChinaHistoryCultureAction">
+			<result name="chinaHistoryCulture">info_step_view.jsp</result>
+		</action>
+		<!-- ChinaHistoryCultureDetail-->
+		<action name="chinaHistoryCultureDetail" class="com.hjf.beacon.action.ChinaHistoryCultureDetailAction">
+			<result name="chinaHistoryCultureDetail">info_step_view.jsp</result>
+		</action>
+		<!-- ChinaHistoryOldenWar-->
+		<action name="chinaHistoryOldenWar" class="com.hjf.beacon.action.ChinaHistoryOldenWarAction">
+			<result name="chinaHistoryOldenWar">info_step_view.jsp</result>
+		</action>
+		<!-- ChinaHistoryOldenWarDetail-->
+		<action name="chinaHistoryOldenWarDetail" class="com.hjf.beacon.action.ChinaHistoryOldenWarDetailAction">
+			<result name="chinaHistoryOldenWarDetail">info_step_view.jsp</result>
+		</action>
+		<!-- ChinaHistoryHeyDay-->
+		<action name="chinaHistoryHeyDay" class="com.hjf.beacon.action.ChinaHistoryHeyDayAction">
+			<result name="chinaHistoryHeyDay">info_step_view.jsp</result>
+		</action>
+		<!-- ChinaHistoryHeyDayInFo-->
+		<action name="chinaHistoryHeyDayInFo" class="com.hjf.beacon.action.ChinaHistoryHeyDayInFoAction">
+			<result name="chinaHistoryHeyDayInFo">info_step_view.jsp</result>
+		</action>
+		<!-- ChinaHistoryCheck-->
+		<action name="chinaHistoryCheck" class="com.hjf.beacon.action.ChinaHistoryCheckAction">
+			<result name="chinaHistoryCheck">info_step_view.jsp</result>
+		</action>
+		<!-- ChinaHistoryCheckDetail-->
+		<action name="chinaHistoryCheckDetail" class="com.hjf.beacon.action.ChinaHistoryCheckDetailAction">
+			<result name="chinaHistoryCheckDetail">info_step_view.jsp</result>
+		</action>
+		<!-- ForeignHistory-->
+		<action name="foreignHistory" class="com.hjf.beacon.action.ForeignHistoryAction">
+			<result name="foreignHistory">info_step_view.jsp</result>
+		</action>
+		<!-- ForeignHistoryDetail-->
+		<action name="foreignHistoryDetail" class="com.hjf.beacon.action.ForeignHistoryDetailAction">
+			<result name="foreignHistoryDetail">info_step_view.jsp</result>
+		</action>
+		<!-- admin-->
+		<action name="admin" class="com.hjf.beacon.action.AdminAction">
+			<result name="success">index.jsp</result>
+			<result name="false">ji.jsp</result>
+		</action>
+	</package>
+		
+</struts>    
+
+
