@@ -23,8 +23,93 @@ public class MuseumAction {
 	private MuseumService museumService;
 	HttpServletRequest request = ServletActionContext.getRequest();
 
+	public String save() {
+		String[] split = museum.getType().split(",");
+		List<String> list = new ArrayList<>();
+		for (String string : split) {
+			list.add(string);
+		}
+		museum.setType(list.toString());
+		museumService.save(museum);
+		getAllMuseumWeb();
+		return "museums";
+	}
+
+	public String delete() {
+		int id = Integer.parseInt(request.getParameter("id"));
+		museumService.delete(Museum.class, id);
+		getAllMuseumWeb();
+		return "museums";
+	}
+
+	public String update() {
+
+		String flag = request.getParameter("flag");
+		int id = Integer.parseInt(request.getParameter("id"));
+		if (flag.equals("update")) {
+			Museum museum = new Museum();
+			museum = museumService.find(Museum.class, id);
+			String str=museum.getType().replace("[", "");
+			str=str.replace("]", "");
+			museum.setType(str);
+			request.setAttribute("museum", museum);
+			return "museum_change";
+		} else {
+			museum.setType("["+museum.getType()+"]");
+			museumService.merge(museum);
+			getAllMuseumWeb();
+			return "museums";
+		}
+		
+	}
+
+	public String getAllMuseumWeb() {
+
+		int pageSize = 3; // 每页显示记录条数
+		int pageNow = 1; // 初始化页数
+		String spageNow = request.getParameter("pagenow");
+		String name = request.getParameter("name");
+		String query = "all";
+
+		if (!name.equals("")) {
+			query = "";
+		}
+		if (!spageNow.equals("")) {
+			pageNow = Integer.parseInt(spageNow);
+		}
+		long pageMax = (Long) museumService.getResult("select count(*) from Museum", 0, 0).iterator().next();
+		long pageCount = 0;
+		if (pageMax % pageSize == 0) {
+			pageCount = pageMax / pageSize; // 总的页数
+		} else {
+			pageCount = (pageMax / pageSize) + 1;
+		}
+		if (pageNow > pageCount || pageNow < 1) {
+			if (pageNow > pageCount) {
+				pageNow = (int) pageCount;
+			}
+			if (pageNow < 1) {
+				pageNow = 1;
+			}
+		}
+		List<Museum> museums = new ArrayList<>();
+
+		String hql = "from Museum ";
+		if (!query.equals("all")) {
+			hql = "from Museum e where museum_name like '%" + name + "%'";
+			museums = museumService.getResult(hql, 0, 0);
+		} else {
+			museums = museumService.getResult(hql, (pageNow - 1) * pageSize, pageSize);
+			request.setAttribute("show", "1"); // 是否显示分页
+			request.setAttribute("pagenow", pageNow);
+			request.setAttribute("pagecount", pageCount);
+		}
+		request.setAttribute("museums", museums);
+		return "museums";
+	}
+
 	public String getAllMuseum() {
-		List<Museum> museums=new ArrayList<Museum>();
+		List<Museum> museums = new ArrayList<Museum>();
 		int page = Integer.parseInt(request.getParameter("page"));
 		String search_condition = request.getParameter("search_condition");
 		Map<String, Object> map = new HashMap<String, Object>();

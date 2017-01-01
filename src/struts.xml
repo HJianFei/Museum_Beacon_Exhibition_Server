@@ -59,7 +59,8 @@
 		</action>
 		<!-- Museum -->
 		<action name="museum" class="com.hjf.beacon.action.MuseumAction">
-			<result name="museum">info_museum.jsp</result>
+			<result name="museums">page/home/museum.jsp</result>
+			<result name="museum_change">page/home/museum_change.jsp</result>
 		</action>
 		<!-- MuseumDetail-->
 		<action name="museumDetail" class="com.hjf.beacon.action.MuseumDetailAction">

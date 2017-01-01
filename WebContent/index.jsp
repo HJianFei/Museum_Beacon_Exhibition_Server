@@ -86,9 +86,9 @@
 			<span class="icon-pencil-square-o"></span>博物馆
 		</h2>
 		<ul>
-			<li><a href="exhibition!getAllExhibitionByCity?city=&tip=&pagenow=" target="right"><span
+			<li><a href="museum!getAllMuseumWeb?name=&pagenow=" target="right"><span
 					class="icon-caret-right"></span>内容管理</a></li>
-			<li><a href="page/home/exhibition_add.jsp" target="right"><span
+			<li><a href="page/home/museum_add.jsp" target="right"><span
 					class="icon-caret-right"></span>添加内容</a></li>
 		</ul>
 	</div>
