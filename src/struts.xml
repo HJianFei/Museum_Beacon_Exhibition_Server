@@ -145,7 +145,8 @@
 		</action>
 		<!-- ChinaHistoryCheck-->
 		<action name="chinaHistoryCheck" class="com.hjf.beacon.action.ChinaHistoryCheckAction">
-			<result name="chinaHistoryCheck">info_step_view.jsp</result>
+			<result name="chinaHistoryCheck">page/history/history_check.jsp</result>
+			<result name="chinaHistoryCheck_change">page/history/history_check_change.jsp</result>
 		</action>
 		<!-- ChinaHistoryCheckDetail-->
 		<action name="chinaHistoryCheckDetail" class="com.hjf.beacon.action.ChinaHistoryCheckDetailAction">

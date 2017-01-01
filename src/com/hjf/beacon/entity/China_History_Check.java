@@ -11,6 +11,7 @@ public class China_History_Check implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	private int id;
 	private String title;
 	private String img_url;
 	private String detail_url;
@@ -19,6 +20,15 @@ public class China_History_Check implements Serializable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public String getTitle() {
 		return title;
 	}

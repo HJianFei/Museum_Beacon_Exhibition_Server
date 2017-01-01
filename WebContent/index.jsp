@@ -92,9 +92,9 @@
 			<span class="icon-pencil-square-o"></span>历史盘点
 		</h2>
 		<ul>
-			<li><a href="chinaHistoryHeyDay!getAllChinaHistoryHeyDaysWeb?search=&pagenow=" target="right"><span
+			<li><a href="chinaHistoryCheck!getAllHistoryCheckWeb?search=&pagenow=" target="right"><span
 					class="icon-caret-right"></span>内容管理</a></li>
-			<li><a href="page/history/history_hey_day_add.jsp" target="right"><span
+			<li><a href="page/history/history_check_add.jsp" target="right"><span
 					class="icon-caret-right"></span>添加内容</a></li>
 		</ul>
 	</div>
