@@ -26,7 +26,6 @@ public class ExhibitionServiceImpl implements ExhibitionService {
 
 	@Override
 	public <T> void merge(Exhibition exhibition) {
-		// TODO Auto-generated method stub
 		dao.merge(exhibition);
 
 	}

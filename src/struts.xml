@@ -5,10 +5,14 @@
 
 <struts>
 	<constant name="struts.objectFactory" value="spring" />
-	<constant name="struts.i18n.encoding" value="UTF-8" />
-	<constant name="struts.objectFactory.spring.autoWire.alwaysRespect"
-		value="true" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
 	<constant name="struts.devMode" value="true" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.i18n.reload" value="true" />
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<constant name="struts.custom.i18n.resources" value="globalMessages" />
+	<constant name="struts.url.includeParams" value="none" />
+	<constant name="struts.ui.theme" value="xhtml"></constant>
 
 	<package name="beaconsys" extends="struts-default,json-default"
 		namespace="/">
@@ -22,7 +26,7 @@
 		</action>
 		<!-- ViewPager -->
 		<action name="viewPager" class="com.hjf.beacon.action.ViewPagerAction">
-			<result name="viewPager">info_cultural.jsp</result>
+			<result name="viewPager">page/home/banner.jsp</result>
 		</action>
 		<!-- Appreciate -->
 		<action name="appreciate" class="com.hjf.beacon.action.AppreciateAction">
@@ -34,7 +38,8 @@
 		</action>
 		<!-- Exhibition -->
 		<action name="exhibition" class="com.hjf.beacon.action.ExhibitionAction">
-			<result name="exhibition">info_exhibition.jsp</result>
+			<result name="exhibition">page/home/exhibition.jsp</result>
+			<result name="exhibition_change">page/home/exhibition_change.jsp</result>
 		</action>
 		<!-- ExhibitionDetail -->
 		<action name="exhibitionDetail" class="com.hjf.beacon.action.ExhibitionDetailAction">

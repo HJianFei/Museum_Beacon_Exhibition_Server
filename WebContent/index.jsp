@@ -70,8 +70,26 @@
 			<span class="icon-pencil-square-o"></span>首页轮播
 		</h2>
 		<ul>
-			<li><a href="page/home/banner.jsp" target="right"><span
+			<li><a href="viewPager!getAllViewPagerWeb" target="right"><span
 					class="icon-caret-right"></span>内容管理</a></li>
+		</ul>
+		<h2>
+			<span class="icon-pencil-square-o"></span>热门展厅
+		</h2>
+		<ul>
+			<li><a href="exhibition!getAllExhibitionByCity?city=&tip=&pagenow=" target="right"><span
+					class="icon-caret-right"></span>内容管理</a></li>
+			<li><a href="page/home/exhibition_add.jsp" target="right"><span
+					class="icon-caret-right"></span>添加内容</a></li>
+		</ul>
+		<h2>
+			<span class="icon-pencil-square-o"></span>博物馆
+		</h2>
+		<ul>
+			<li><a href="exhibition!getAllExhibitionByCity?city=&tip=&pagenow=" target="right"><span
+					class="icon-caret-right"></span>内容管理</a></li>
+			<li><a href="page/home/exhibition_add.jsp" target="right"><span
+					class="icon-caret-right"></span>添加内容</a></li>
 		</ul>
 	</div>
 	<script type="text/javascript">

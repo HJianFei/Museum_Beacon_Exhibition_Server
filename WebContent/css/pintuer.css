@@ -3460,7 +3460,7 @@ to {
 }
 
 .button-group .button, .button-group .button-group .button {
-	margin-left: -1px;
+	margin-left: 2px;
 }
 
 .button-group :first-child:not (:last-child ).button:not (.dropdown-toggle

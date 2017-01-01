@@ -13,17 +13,12 @@ public class ViewPager {
 	private String content;
 	private String detail_url;
 	private String img_url;
+	private String img_name;
 	public ViewPager() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public ViewPager(int id, String content, String detail_url, String img_url) {
-		super();
-		this.id = id;
-		this.content = content;
-		this.detail_url = detail_url;
-		this.img_url = img_url;
-	}
+
 	public int getId() {
 		return id;
 	}
@@ -48,6 +43,14 @@ public class ViewPager {
 	public void setImg_url(String img_url) {
 		this.img_url = img_url;
 	}
+	public String getImg_name() {
+		return img_name;
+	}
+
+	public void setImg_name(String img_name) {
+		this.img_name = img_name;
+	}
+
 	@Override
 	public String toString() {
 		return "ViewPager [id=" + id + ", content=" + content + ", detail_url=" + detail_url + ", img_url=" + img_url

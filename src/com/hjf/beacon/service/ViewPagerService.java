@@ -1,5 +1,7 @@
 package com.hjf.beacon.service;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 import org.hibernate.Query;
@@ -12,14 +14,14 @@ public interface ViewPagerService {
 	 * 
 	 * @param object
 	 */
-	<T> void save(ViewPager viewPager);
+	<T> void save(ViewPager viewPager, String filePath, String fileFileName);
 
 	/**
 	 * 更新
 	 * 
 	 * @param ojbect
 	 */
-	<T> void merge(ViewPager viewPager);
+	<T> void merge(ViewPager viewPager, File file, String fileFileName);
 
 	/**
 	 * 删除
@@ -54,5 +56,8 @@ public interface ViewPagerService {
 	 * @return
 	 */
 	public <T> List<T> getResult(String hql, int firstIndex, int maxSize);
+
+	// 保存附件
+	String saveFile(File file, String fileName) throws IOException;
 
 }
