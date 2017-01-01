@@ -30,10 +30,6 @@ public class ForeignHistoryAction {
 		int page = Integer.parseInt(request.getParameter("page"));
 		String search_condition=request.getParameter("search_condition");
 		Map<String, Object> map = new HashMap<String, Object>();
-		System.out.println(type);
-		System.out.println(country);
-		System.out.println(page);
-		System.out.println(search_condition+">>");
 		String hql = "from Foreign_History a where country='"+country+"' and type ='" + type + "' ORDER BY view DESC";
 		if (null!=search_condition&&!search_condition.equals("")) {
 			hql="from Foreign_History a where title like '%"+search_condition+"%' and country='"+country+"' and type ='" + type + "' ORDER BY view DESC";

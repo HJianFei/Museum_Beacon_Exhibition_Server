@@ -42,18 +42,6 @@
 		<ul style="display: block">
 			<li><a href="page/admin/admin_add.jsp" target="right"><span
 					class="icon-caret-right"></span>增加管理员</a></li>
-			<li><a href="info.html" target="right"><span
-					class="icon-caret-right"></span>网站设置</a></li>
-			<li><a href="pass.html" target="right"><span
-					class="icon-caret-right"></span>修改密码</a></li>
-			<li><a href="page.html" target="right"><span
-					class="icon-caret-right"></span>单页管理</a></li>
-			<li><a href="adv.html" target="right"><span
-					class="icon-caret-right"></span>首页轮播</a></li>
-			<li><a href="book.html" target="right"><span
-					class="icon-caret-right"></span>留言管理</a></li>
-			<li><a href="column.html" target="right"><span
-					class="icon-caret-right"></span>栏目管理</a></li>
 		</ul>
 		<h2>
 			<span class="icon-pencil-square-o"></span>栏目管理
@@ -89,6 +77,24 @@
 			<li><a href="museum!getAllMuseumWeb?name=&pagenow=" target="right"><span
 					class="icon-caret-right"></span>内容管理</a></li>
 			<li><a href="page/home/museum_add.jsp" target="right"><span
+					class="icon-caret-right"></span>添加内容</a></li>
+		</ul>
+		<h2>
+			<span class="icon-pencil-square-o"></span>历史盛世
+		</h2>
+		<ul>
+			<li><a href="chinaHistoryHeyDay!getAllChinaHistoryHeyDaysWeb?search=&pagenow=" target="right"><span
+					class="icon-caret-right"></span>内容管理</a></li>
+			<li><a href="page/history/history_hey_day_add.jsp" target="right"><span
+					class="icon-caret-right"></span>添加内容</a></li>
+		</ul>
+		<h2>
+			<span class="icon-pencil-square-o"></span>历史盘点
+		</h2>
+		<ul>
+			<li><a href="chinaHistoryHeyDay!getAllChinaHistoryHeyDaysWeb?search=&pagenow=" target="right"><span
+					class="icon-caret-right"></span>内容管理</a></li>
+			<li><a href="page/history/history_hey_day_add.jsp" target="right"><span
 					class="icon-caret-right"></span>添加内容</a></li>
 		</ul>
 	</div>

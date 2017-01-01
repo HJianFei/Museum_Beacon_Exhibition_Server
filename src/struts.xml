@@ -136,7 +136,8 @@
 		</action>
 		<!-- ChinaHistoryHeyDay-->
 		<action name="chinaHistoryHeyDay" class="com.hjf.beacon.action.ChinaHistoryHeyDayAction">
-			<result name="chinaHistoryHeyDay">info_step_view.jsp</result>
+			<result name="chinaHistoryHeyDay">page/history/history_hey_day.jsp</result>
+			<result name="chinaHistoryHeyDay_change">page/history/history_hey_day_change.jsp</result>
 		</action>
 		<!-- ChinaHistoryHeyDayInFo-->
 		<action name="chinaHistoryHeyDayInFo" class="com.hjf.beacon.action.ChinaHistoryHeyDayInFoAction">
