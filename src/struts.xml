@@ -96,7 +96,8 @@
 		</action>
 		<!-- ChinaHistoryBigThing-->
 		<action name="chinaHistoryBigThing" class="com.hjf.beacon.action.ChinaHistoryBigThingAction">
-			<result name="chinaHistoryBigThing">info_step_view.jsp</result>
+			<result name="chinaHistoryBigThing">page/history/history_big_thing.jsp</result>
+			<result name="chinaHistoryBigThing_change">page/history/history_big_thing_change.jsp</result>
 		</action>
 		<!-- ChinaHistoryBigThingDetail-->
 		<action name="chinaHistoryBigThingDetail" class="com.hjf.beacon.action.ChinaHistoryBigThingDetailAction">
@@ -128,7 +129,8 @@
 		</action>
 		<!-- ChinaHistoryOldenWar-->
 		<action name="chinaHistoryOldenWar" class="com.hjf.beacon.action.ChinaHistoryOldenWarAction">
-			<result name="chinaHistoryOldenWar">info_step_view.jsp</result>
+			<result name="chinaHistoryOldenWar">page/war/history_wars.jsp</result>
+			<result name="chinaHistoryOldenWar_change">page/war/history_wars_change.jsp</result>
 		</action>
 		<!-- ChinaHistoryOldenWarDetail-->
 		<action name="chinaHistoryOldenWarDetail" class="com.hjf.beacon.action.ChinaHistoryOldenWarDetailAction">

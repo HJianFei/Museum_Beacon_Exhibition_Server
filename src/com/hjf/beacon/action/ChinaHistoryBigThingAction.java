@@ -22,6 +22,83 @@ public class ChinaHistoryBigThingAction {
 	@Resource(name = "ChinaHistoryBigThingService")
 	private ChinaHistoryBigThingService chinaHistoryBigThingService;
 	HttpServletRequest request = ServletActionContext.getRequest();
+	
+	public String save() {
+		chinaHistoryBigThingService.save(china_History_Big_Thing);
+		getAllBigThingByType();
+		return "chinaHistoryBigThing";
+		
+	}
+	public String delete() {
+		int id = Integer.parseInt(request.getParameter("id"));
+		chinaHistoryBigThingService.delete(China_History_Big_Thing.class, id);
+		getAllBigThingByType();
+		return "chinaHistoryBigThing";
+		
+	}
+	public String update() {
+
+		String flag = request.getParameter("flag");
+		int id = Integer.parseInt(request.getParameter("id"));
+		if (flag.equals("update")) {
+			China_History_Big_Thing big_Thing = new China_History_Big_Thing();
+			big_Thing = chinaHistoryBigThingService.find(China_History_Big_Thing.class, id);
+			request.setAttribute("big_Thing",big_Thing);
+			return "chinaHistoryBigThing_change";
+		} else {
+			
+			chinaHistoryBigThingService.merge(china_History_Big_Thing);
+			getAllBigThingByType();
+			return "chinaHistoryBigThing";
+		}
+		
+	}
+	
+	public String getAllBigThingByType() {
+		int pageSize = 3; // 每页显示记录条数
+		int pageNow = 1; // 初始化页数
+		String spageNow = request.getParameter("pagenow");
+		String title = request.getParameter("title");
+		String type = request.getParameter("type");
+		String query = "all";
+
+		if (!title.equals("")) {
+			query = "";
+		}
+		if (!spageNow.equals("")) {
+			pageNow = Integer.parseInt(spageNow);
+		}
+		long pageMax = (Long) chinaHistoryBigThingService.getResult("select count(*) from China_History_Big_Thing where type='"+type+"'", 0, 0).iterator().next();
+		long pageCount = 0;
+		if (pageMax % pageSize == 0) {
+			pageCount = pageMax / pageSize; // 总的页数
+		} else {
+			pageCount = (pageMax / pageSize) + 1;
+		}
+		if (pageNow > pageCount || pageNow < 1) {
+			if (pageNow > pageCount) {
+				pageNow = (int) pageCount;
+			}
+			if (pageNow < 1) {
+				pageNow = 1;
+			}
+		}
+		List<China_History_Big_Thing> china_History_Big_Things = new ArrayList<>();
+
+		String hql = "from China_History_Big_Thing where type='"+type+"'";
+		if (!query.equals("all")) {
+			hql = "from China_History_Big_Thing e where title like '%" + title + "%'";
+			china_History_Big_Things = chinaHistoryBigThingService.getResult(hql, 0, 0);
+		} else {
+			china_History_Big_Things = chinaHistoryBigThingService.getResult(hql, (pageNow - 1) * pageSize, pageSize);
+			request.setAttribute("show", "1"); // 是否显示分页
+			request.setAttribute("pagenow", pageNow);
+			request.setAttribute("pagecount", pageCount);
+		}
+		request.setAttribute("type", type);
+		request.setAttribute("BigThings", china_History_Big_Things);
+		return "chinaHistoryBigThing";
+	}
 
 	public String getChinaHistoryBigThings() {
 		List<China_History_Big_Thing> china_History_Big_Things=new ArrayList<>();

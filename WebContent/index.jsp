@@ -62,6 +62,13 @@
 					class="icon-caret-right"></span>内容管理</a></li>
 		</ul>
 		<h2>
+			<span class="icon-pencil-square-o"></span>历史大事件
+		</h2>
+		<ul>
+			<li><a href="chinaHistoryBigThing!getAllBigThingByType?pagenow=&title=&type=上古" target="right"><span
+					class="icon-caret-right"></span>内容管理</a></li>
+		</ul>
+		<h2>
 			<span class="icon-pencil-square-o"></span>热门展厅
 		</h2>
 		<ul>
@@ -96,6 +103,17 @@
 					class="icon-caret-right"></span>内容管理</a></li>
 			<li><a href="page/history/history_check_add.jsp" target="right"><span
 					class="icon-caret-right"></span>添加内容</a></li>
+		</ul>
+		<h2>
+			<span class="icon-pencil-square-o"></span>历史战争
+		</h2>
+		<ul>
+			<li><a href="chinaHistoryOldenWar!getWarsWeb?search=&pagenow=&type=古代战争" target="right"><span
+					class="icon-caret-right"></span>古代战争</a></li>
+			<li><a href="chinaHistoryOldenWar!getWarsWeb?search=&pagenow=&type=近代战争" target="right"><span
+					class="icon-caret-right"></span>近代战争</a></li>
+			<li><a href="chinaHistoryOldenWar!getWarsWeb?search=&pagenow=&type=外国战争" target="right"><span
+					class="icon-caret-right"></span>外国战争</a></li>
 		</ul>
 	</div>
 	<script type="text/javascript">

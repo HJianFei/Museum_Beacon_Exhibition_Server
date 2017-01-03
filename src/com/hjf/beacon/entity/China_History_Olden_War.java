@@ -11,15 +11,26 @@ public class China_History_Olden_War implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	private int id;
 	private String name;
 	private String img_url;
 	private String description;
 	private String detail_url;
 	private String type;
+	
 	public China_History_Olden_War() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public String getName() {
 		return name;
 	}
