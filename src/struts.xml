@@ -105,7 +105,8 @@
 		</action>
 		<!-- ChinaHistoryPeople-->
 		<action name="chinaHistoryPeople" class="com.hjf.beacon.action.ChinaHistoryPeopleAction">
-			<result name="chinaHistorypeople">info_step_view.jsp</result>
+			<result name="chinaHistoryPeople">page/history/history_people.jsp</result>
+			<result name="chinaHistoryPeople_change">page/history/history_people_change.jsp</result>
 		</action>
 		<!-- ChinaHistoryPeopleDetail-->
 		<action name="chinaHistoryPeopleDetail" class="com.hjf.beacon.action.ChinaHistoryPeopleDetailAction">

@@ -11,15 +11,26 @@ public class China_History_People implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	private int id;
 	private String detail_url;
 	private String type;
 	private String name;
 	private String img_url;
 	private int views;
+	
 	public China_History_People() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public String getDetail_url() {
 		return detail_url;
 	}

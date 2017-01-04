@@ -65,15 +65,25 @@
 			<span class="icon-pencil-square-o"></span>历史大事件
 		</h2>
 		<ul>
-			<li><a href="chinaHistoryBigThing!getAllBigThingByType?pagenow=&title=&type=上古" target="right"><span
-					class="icon-caret-right"></span>内容管理</a></li>
+			<li><a
+				href="chinaHistoryBigThing!getAllBigThingByType?pagenow=&title=&type=上古"
+				target="right"><span class="icon-caret-right"></span>内容管理</a></li>
+		</ul>
+		<h2>
+			<span class="icon-pencil-square-o"></span>历史人物
+		</h2>
+		<ul>
+			<li><a 
+				href="chinaHistoryPeople!getAllPeopleByType?pagenow=&name=&type=上古"
+				target="right"><span class="icon-caret-right"></span>内容管理</a></li>
 		</ul>
 		<h2>
 			<span class="icon-pencil-square-o"></span>热门展厅
 		</h2>
 		<ul>
-			<li><a href="exhibition!getAllExhibitionByCity?city=&tip=&pagenow=" target="right"><span
-					class="icon-caret-right"></span>内容管理</a></li>
+			<li><a
+				href="exhibition!getAllExhibitionByCity?city=&tip=&pagenow="
+				target="right"><span class="icon-caret-right"></span>内容管理</a></li>
 			<li><a href="page/home/exhibition_add.jsp" target="right"><span
 					class="icon-caret-right"></span>添加内容</a></li>
 		</ul>
@@ -81,8 +91,8 @@
 			<span class="icon-pencil-square-o"></span>博物馆
 		</h2>
 		<ul>
-			<li><a href="museum!getAllMuseumWeb?name=&pagenow=" target="right"><span
-					class="icon-caret-right"></span>内容管理</a></li>
+			<li><a href="museum!getAllMuseumWeb?name=&pagenow="
+				target="right"><span class="icon-caret-right"></span>内容管理</a></li>
 			<li><a href="page/home/museum_add.jsp" target="right"><span
 					class="icon-caret-right"></span>添加内容</a></li>
 		</ul>
@@ -90,17 +100,19 @@
 			<span class="icon-pencil-square-o"></span>历史盛世
 		</h2>
 		<ul>
-			<li><a href="chinaHistoryHeyDay!getAllChinaHistoryHeyDaysWeb?search=&pagenow=" target="right"><span
-					class="icon-caret-right"></span>内容管理</a></li>
-			<li><a href="page/history/history_hey_day_add.jsp" target="right"><span
-					class="icon-caret-right"></span>添加内容</a></li>
+			<li><a
+				href="chinaHistoryHeyDay!getAllChinaHistoryHeyDaysWeb?search=&pagenow="
+				target="right"><span class="icon-caret-right"></span>内容管理</a></li>
+			<li><a href="page/history/history_hey_day_add.jsp"
+				target="right"><span class="icon-caret-right"></span>添加内容</a></li>
 		</ul>
 		<h2>
 			<span class="icon-pencil-square-o"></span>历史盘点
 		</h2>
 		<ul>
-			<li><a href="chinaHistoryCheck!getAllHistoryCheckWeb?search=&pagenow=" target="right"><span
-					class="icon-caret-right"></span>内容管理</a></li>
+			<li><a
+				href="chinaHistoryCheck!getAllHistoryCheckWeb?search=&pagenow="
+				target="right"><span class="icon-caret-right"></span>内容管理</a></li>
 			<li><a href="page/history/history_check_add.jsp" target="right"><span
 					class="icon-caret-right"></span>添加内容</a></li>
 		</ul>
@@ -108,12 +120,15 @@
 			<span class="icon-pencil-square-o"></span>历史战争
 		</h2>
 		<ul>
-			<li><a href="chinaHistoryOldenWar!getWarsWeb?search=&pagenow=&type=古代战争" target="right"><span
-					class="icon-caret-right"></span>古代战争</a></li>
-			<li><a href="chinaHistoryOldenWar!getWarsWeb?search=&pagenow=&type=近代战争" target="right"><span
-					class="icon-caret-right"></span>近代战争</a></li>
-			<li><a href="chinaHistoryOldenWar!getWarsWeb?search=&pagenow=&type=外国战争" target="right"><span
-					class="icon-caret-right"></span>外国战争</a></li>
+			<li><a
+				href="chinaHistoryOldenWar!getWarsWeb?search=&pagenow=&type=古代战争"
+				target="right"><span class="icon-caret-right"></span>古代战争</a></li>
+			<li><a
+				href="chinaHistoryOldenWar!getWarsWeb?search=&pagenow=&type=近代战争"
+				target="right"><span class="icon-caret-right"></span>近代战争</a></li>
+			<li><a
+				href="chinaHistoryOldenWar!getWarsWeb?search=&pagenow=&type=外国战争"
+				target="right"><span class="icon-caret-right"></span>外国战争</a></li>
 		</ul>
 	</div>
 	<script type="text/javascript">

@@ -23,6 +23,81 @@ public class ChinaHistoryPeopleAction {
 	private ChinaHistoryPeopleService chinaHistoryPeopleService;
 	HttpServletRequest request = ServletActionContext.getRequest();
 
+	public String save(){
+		chinaHistoryPeopleService.save(china_History_People);
+		getAllPeopleByType();
+		return "chinaHistoryPeople";
+	}
+	
+	public String delete(){
+		int id = Integer.parseInt(request.getParameter("id"));
+		chinaHistoryPeopleService.delete(China_History_People.class, id);
+		getAllPeopleByType();
+		return "chinaHistoryPeople";
+	}
+	
+	public String update() {
+
+		String flag = request.getParameter("flag");
+		int id = Integer.parseInt(request.getParameter("id"));
+		if (flag.equals("update")) {
+			China_History_People people = new China_History_People();
+			people = chinaHistoryPeopleService.find(China_History_People.class, id);
+			request.setAttribute("people",people);
+			return "chinaHistoryPeople_change";
+		} else {
+			
+			chinaHistoryPeopleService.merge(china_History_People);
+			getAllPeopleByType();
+			return "chinaHistoryPeople";
+		}
+		
+	}
+	public String getAllPeopleByType(){
+		int pageSize = 3; // 每页显示记录条数
+		int pageNow = 1; // 初始化页数
+		String spageNow = request.getParameter("pagenow");
+		String name = request.getParameter("name");
+		String type = request.getParameter("type");
+		String query = "all";
+
+		if (!name.equals("")) {
+			query = "";
+		}
+		if (!spageNow.equals("")) {
+			pageNow = Integer.parseInt(spageNow);
+		}
+		long pageMax = (Long) chinaHistoryPeopleService.getResult("select count(*) from China_History_People where type='"+type+"'", 0, 0).iterator().next();
+		long pageCount = 0;
+		if (pageMax % pageSize == 0) {
+			pageCount = pageMax / pageSize; // 总的页数
+		} else {
+			pageCount = (pageMax / pageSize) + 1;
+		}
+		if (pageNow > pageCount || pageNow < 1) {
+			if (pageNow > pageCount) {
+				pageNow = (int) pageCount;
+			}
+			if (pageNow < 1) {
+				pageNow = 1;
+			}
+		}
+		List<China_History_People> china_History_Peoples = new ArrayList<>();
+
+		String hql = "from China_History_People where type='"+type+"'";
+		if (!query.equals("all")) {
+			hql = "from China_History_People e where name like '%" + name + "%'";
+			china_History_Peoples = chinaHistoryPeopleService.getResult(hql, 0, 0);
+		} else {
+			china_History_Peoples = chinaHistoryPeopleService.getResult(hql, (pageNow - 1) * pageSize, pageSize);
+			request.setAttribute("show", "1"); // 是否显示分页
+			request.setAttribute("pagenow", pageNow);
+			request.setAttribute("pagecount", pageCount);
+		}
+		request.setAttribute("type", type);
+		request.setAttribute("china_History_Peoples", china_History_Peoples);
+		return "chinaHistoryPeople";
+	}
 	public String getAllHistoryPeople() {
 		List<China_History_People> china_History_Peoples=new ArrayList<>();
 		String type = request.getParameter("type");
