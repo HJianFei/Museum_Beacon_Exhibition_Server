@@ -44,17 +44,6 @@
 					class="icon-caret-right"></span>增加管理员</a></li>
 		</ul>
 		<h2>
-			<span class="icon-pencil-square-o"></span>栏目管理
-		</h2>
-		<ul>
-			<li><a href="list.html" target="right"><span
-					class="icon-caret-right"></span>内容管理</a></li>
-			<li><a href="add.html" target="right"><span
-					class="icon-caret-right"></span>添加内容</a></li>
-			<li><a href="cate.html" target="right"><span
-					class="icon-caret-right"></span>分类管理</a></li>
-		</ul>
-		<h2>
 			<span class="icon-pencil-square-o"></span>首页轮播
 		</h2>
 		<ul>
@@ -62,20 +51,38 @@
 					class="icon-caret-right"></span>内容管理</a></li>
 		</ul>
 		<h2>
-			<span class="icon-pencil-square-o"></span>历史大事件
+			<span class="icon-pencil-square-o">中国历史</span>
 		</h2>
 		<ul>
 			<li><a
 				href="chinaHistoryBigThing!getAllBigThingByType?pagenow=&title=&type=上古"
-				target="right"><span class="icon-caret-right"></span>内容管理</a></li>
+				target="right"><span class="icon-caret-right"></span>历史大事件</a></li>
+			<li><a
+				href="chinaHistoryPeople!getAllPeopleByType?pagenow=&name=&type=上古"
+				target="right"><span class="icon-caret-right"></span>历史人物</a></li>
+			<li><a
+				href="chinaHistoryHistory!getAllByType?pagenow=&title=&type=上古"
+				target="right"><span class="icon-caret-right"></span>历史资料</a></li>
+			<li><a
+				href="chinaHistoryCulture!getAllByType?pagenow=&title=&type=上古"
+				target="right"><span class="icon-caret-right"></span>历史文化</a></li>
 		</ul>
 		<h2>
-			<span class="icon-pencil-square-o"></span>历史人物
+			<span class="icon-pencil-square-o">外国历史</span>
 		</h2>
 		<ul>
-			<li><a 
-				href="chinaHistoryPeople!getAllPeopleByType?pagenow=&name=&type=上古"
-				target="right"><span class="icon-caret-right"></span>内容管理</a></li>
+			<li><a
+				href="foreignHistory!getAllByType?pagenow=&title=&type=历史资料&country=美国历史"
+				target="right"><span class="icon-caret-right"></span>历史资料</a></li>
+			<li><a
+				href="foreignHistory!getAllByType?pagenow=&title=&type=人物故事&country=美国历史"
+				target="right"><span class="icon-caret-right"></span>人物故事</a></li>
+			<li><a
+				href="foreignHistory!getAllByType?pagenow=&title=&type=历史文化&country=美国历史"
+				target="right"><span class="icon-caret-right"></span>国家文化</a></li>
+			<li><a
+				href="foreignHistory!getAllByType?pagenow=&title=&type=历史科技&country=美国历史"
+				target="right"><span class="icon-caret-right"></span>国家科技</a></li>
 		</ul>
 		<h2>
 			<span class="icon-pencil-square-o"></span>热门展厅

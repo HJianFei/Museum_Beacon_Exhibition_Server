@@ -114,7 +114,8 @@
 		</action>
 		<!-- ChinaHistoryHistory-->
 		<action name="chinaHistoryHistory" class="com.hjf.beacon.action.ChinaHistoryHistoryAction">
-			<result name="chinaHistoryHistory">info_step_view.jsp</result>
+			<result name="chinaHistoryHistory">page/history/history_history.jsp</result>
+			<result name="chinaHistoryHistory_change">page/history/history_history_change.jsp</result>
 		</action>
 		<!-- ChinaHistoryHistoryDetail-->
 		<action name="chinaHistoryHistoryDetail" class="com.hjf.beacon.action.ChinaHistoryHistoryDetailAction">
@@ -122,7 +123,8 @@
 		</action>
 		<!-- ChinaHistoryCulture-->
 		<action name="chinaHistoryCulture" class="com.hjf.beacon.action.ChinaHistoryCultureAction">
-			<result name="chinaHistoryCulture">info_step_view.jsp</result>
+			<result name="chinaHistoryCulture">page/history/history_culture.jsp</result>
+			<result name="chinaHistoryCulture_change">page/history/history_culture_change.jsp</result>
 		</action>
 		<!-- ChinaHistoryCultureDetail-->
 		<action name="chinaHistoryCultureDetail" class="com.hjf.beacon.action.ChinaHistoryCultureDetailAction">
@@ -157,7 +159,14 @@
 		</action>
 		<!-- ForeignHistory-->
 		<action name="foreignHistory" class="com.hjf.beacon.action.ForeignHistoryAction">
-			<result name="foreignHistory">info_step_view.jsp</result>
+			<result name="foreignHistory_history">page/foreign/history_history.jsp</result>
+			<result name="foreignHistory_history_change">page/foreign/history_history_change.jsp</result>
+			<result name="foreignHistory_people">page/foreign/history_history.jsp</result>
+			<result name="foreignHistory_people_change">page/foreign/history_history_change.jsp</result>
+			<result name="foreignHistory_culture">page/foreign/history_history.jsp</result>
+			<result name="foreignHistory_culture_change">page/foreign/history_history_change.jsp</result>
+			<result name="foreignHistory_technology">page/foreign/history_history.jsp</result>
+			<result name="foreignHistory_technology_change">page/foreign/history_history_change.jsp</result>
 		</action>
 		<!-- ForeignHistoryDetail-->
 		<action name="foreignHistoryDetail" class="com.hjf.beacon.action.ForeignHistoryDetailAction">
