@@ -137,6 +137,14 @@
 				href="chinaHistoryOldenWar!getWarsWeb?search=&pagenow=&type=外国战争"
 				target="right"><span class="icon-caret-right"></span>外国战争</a></li>
 		</ul>
+		<h2>
+			<span class="icon-pencil-square-o"></span>App版本管理
+		</h2>
+		<ul>
+			<li><a
+				href="update!getAllApp?pagenow="
+				target="right"><span class="icon-caret-right"></span>内容管理</a></li>
+		</ul>
 	</div>
 	<script type="text/javascript">
 		$(function() {

@@ -76,7 +76,8 @@
 		</action>
 		<!-- Update-->
 		<action name="update" class="com.hjf.beacon.action.UpdateAction">
-			<result name="user">info_app_update.jsp</result>
+			<result name="update">page/admin/app_update.jsp</result>
+			<result name="update_change">page/admin/app_update_change.jsp</result>
 		</action>
 		<!-- FeedBack-->
 		<action name="feed_back" class="com.hjf.beacon.action.FeedBackAction">
