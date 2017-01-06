@@ -30,7 +30,8 @@
 		</action>
 		<!-- Appreciate -->
 		<action name="appreciate" class="com.hjf.beacon.action.AppreciateAction">
-			<result name="appreciate">info_appreciate.jsp</result>
+			<result name="appreciate">page/appreciate/appreciate.jsp</result>
+			<result name="appreciate_change">page/appreciate/appreciate_change.jsp</result>
 		</action>
 		<!-- AppreciateDetail -->
 		<action name="appreciateDetail" class="com.hjf.beacon.action.AppreciateDetailAction">
@@ -61,6 +62,7 @@
 		<action name="museum" class="com.hjf.beacon.action.MuseumAction">
 			<result name="museums">page/home/museum.jsp</result>
 			<result name="museum_change">page/home/museum_change.jsp</result>
+			<result name="types" type="json"></result>
 		</action>
 		<!-- MuseumDetail-->
 		<action name="museumDetail" class="com.hjf.beacon.action.MuseumDetailAction">

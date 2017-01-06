@@ -22,6 +22,82 @@ public class AppreciateAction {
 	@Resource(name = "AppreciateService")
 	private AppreciateService appreciateService;
 	HttpServletRequest request = ServletActionContext.getRequest();
+	
+	
+	public String save() {
+		appreciateService.save(appreciate);
+		getAllAppreciateWeb();
+		return "appreciate";
+		
+	}
+	public String delete() {
+		int id = Integer.parseInt(request.getParameter("id"));
+		appreciateService.delete(Appreciate.class, id);
+		getAllAppreciateWeb();
+		return "appreciate";
+	}
+	
+	public String update() {
+
+		String flag = request.getParameter("flag");
+		int id = Integer.parseInt(request.getParameter("id"));
+		if (flag.equals("update")) {
+			Appreciate appreciate = new Appreciate();
+			appreciate = appreciateService.find(Appreciate.class, id);
+			request.setAttribute("appreciate", appreciate);
+			return "appreciate_change";
+		} else {
+			appreciateService.merge(appreciate);
+			getAllAppreciateWeb();
+			return "appreciate";
+		}
+	}
+	public String getAllAppreciateWeb() {
+		int pageSize = 3; // 每页显示记录条数
+		int pageNow = 1; // 初始化页数
+		String spageNow = request.getParameter("pagenow");
+		String museum = request.getParameter("museum");
+		String title = request.getParameter("title");
+		String query = "all";
+
+		if (!title.equals("")) {
+			query = "";
+		}
+		if (!spageNow.equals("")) {
+			pageNow = Integer.parseInt(spageNow);
+		}
+		long pageMax = (Long) appreciateService.getResult("select count(*) from Appreciate where museum_name='"+museum+"'", 0, 0).iterator()
+				.next();
+		long pageCount = 0;
+		if (pageMax % pageSize == 0) {
+			pageCount = pageMax / pageSize; // 总的页数
+		} else {
+			pageCount = (pageMax / pageSize) + 1;
+		}
+		if (pageNow > pageCount || pageNow < 1) {
+			if (pageNow > pageCount) {
+				pageNow = (int) pageCount;
+			}
+			if (pageNow < 1) {
+				pageNow = 1;
+			}
+		}
+		List<Appreciate> appreciates = new ArrayList<>();
+
+		String hql = "from Appreciate where museum_name='"+museum+"'";
+		if (!query.equals("all")) {
+			hql = "from Appreciate e where content like '%" + title + "%'";
+			appreciates = appreciateService.getResult(hql, 0, 0);
+		} else {
+			appreciates = appreciateService.getResult(hql, (pageNow - 1) * pageSize, pageSize);
+			request.setAttribute("show", "1"); // 是否显示分页
+			request.setAttribute("pagenow", pageNow);
+			request.setAttribute("pagecount", pageCount);
+		}
+		request.setAttribute("appreciates", appreciates);
+		request.setAttribute("museum", museum);
+		return "appreciate";
+	}
 
 	public String getAllAppreciate() {
 		List<Appreciate> appreciates=new ArrayList<>();

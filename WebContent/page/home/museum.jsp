@@ -30,7 +30,7 @@
 				style="float: right; display: none;">添加字段</a>
 		</div>
 		<form method="post"
-			action="museum!getAllMuseumWeb?pagenow=" id="listform">
+			action="museum!listAllMuseumWeb?pagenow=" id="listform">
 			<div class="padding border-bottom">
 				<ul class="search" style="padding-left: 10px;">
 					<li><a class="button border-main icon-plus-square-o"
@@ -79,11 +79,11 @@
 					<tr>
 						<td colspan="8"><div class="pagelist">
 								共${pagecount }页，当前第${pagenow }页
-								<form action="museum!getAllMuseumWeb?name=" method="post">
-									<a href="museum!getAllMuseumWeb?name=&pagenow=1"> 第一页</a>&nbsp;
-									<a href="museum!getAllMuseumWeb?name=&pagenow=${pagenow - 1}">上一页</a>&nbsp;
-									<a href="museum!getAllMuseumWeb?name=&pagenow=${pagenow + 1}">下一页</a>&nbsp;
-									<a href="museum!getAllMuseumWeb?name=&pagenow=${pagecount}">最后一页</a>
+								<form action="museum!listAllMuseumWeb?name=" method="post">
+									<a href="museum!listAllMuseumWeb?name=&pagenow=1"> 第一页</a>&nbsp;
+									<a href="museum!listAllMuseumWeb?name=&pagenow=${pagenow - 1}">上一页</a>&nbsp;
+									<a href="museum!listAllMuseumWeb?name=&pagenow=${pagenow + 1}">下一页</a>&nbsp;
+									<a href="museum!listAllMuseumWeb?name=&pagenow=${pagecount}">最后一页</a>
 									转跳到 <input type="text" maxlength="3" size="3" name="pagenow" />页
 									<input style="height: 25px; width: auto; cursor: pointer"
 										type="submit" value="转跳" />

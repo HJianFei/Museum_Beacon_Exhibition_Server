@@ -51,7 +51,14 @@
 					class="icon-caret-right"></span>内容管理</a></li>
 		</ul>
 		<h2>
-			<span class="icon-pencil-square-o">中国历史</span>
+			<span class="icon-pencil-square-o"></span>文物鉴赏
+		</h2>
+		<ul>
+			<li><a href="appreciate!getAllAppreciateWeb?pagenow=&museum=广东省博物馆&title=" target="right"><span
+					class="icon-caret-right"></span>内容管理</a></li>
+		</ul>
+		<h2>
+			<span class="icon-pencil-square-o"></span>中国历史
 		</h2>
 		<ul>
 			<li><a
@@ -68,7 +75,7 @@
 				target="right"><span class="icon-caret-right"></span>历史文化</a></li>
 		</ul>
 		<h2>
-			<span class="icon-pencil-square-o">外国历史</span>
+			<span class="icon-pencil-square-o"></span>外国历史
 		</h2>
 		<ul>
 			<li><a
@@ -98,7 +105,7 @@
 			<span class="icon-pencil-square-o"></span>博物馆
 		</h2>
 		<ul>
-			<li><a href="museum!getAllMuseumWeb?name=&pagenow="
+			<li><a href="museum!listAllMuseumWeb?name=&pagenow="
 				target="right"><span class="icon-caret-right"></span>内容管理</a></li>
 			<li><a href="page/home/museum_add.jsp" target="right"><span
 					class="icon-caret-right"></span>添加内容</a></li>
@@ -136,6 +143,14 @@
 			<li><a
 				href="chinaHistoryOldenWar!getWarsWeb?search=&pagenow=&type=外国战争"
 				target="right"><span class="icon-caret-right"></span>外国战争</a></li>
+		</ul>
+		<h2>
+			<span class="icon-pencil-square-o"></span>蓝牙基站管理
+		</h2>
+		<ul>
+			<li><a
+				href="update!getAllApp?pagenow="
+				target="right"><span class="icon-caret-right"></span>内容管理</a></li>
 		</ul>
 		<h2>
 			<span class="icon-pencil-square-o"></span>App版本管理

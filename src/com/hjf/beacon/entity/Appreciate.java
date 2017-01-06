@@ -21,20 +21,10 @@ public class Appreciate implements Serializable {
 	private String type;
 	private String minor;
 	private int view_count;
+	private String museum_name;
 	public Appreciate() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
-	public Appreciate(int id, String img_url, String content, String detail_url, String type, String minor,
-			int view_count) {
-		super();
-		this.id = id;
-		this.img_url = img_url;
-		this.content = content;
-		this.detail_url = detail_url;
-		this.type = type;
-		this.minor = minor;
-		this.view_count = view_count;
 	}
 	public int getId() {
 		return id;
@@ -78,10 +68,17 @@ public class Appreciate implements Serializable {
 	public void setView_count(int view_count) {
 		this.view_count = view_count;
 	}
+	public String getMuseum_name() {
+		return museum_name;
+	}
+	public void setMuseum_name(String museum_name) {
+		this.museum_name = museum_name;
+	}
 	@Override
 	public String toString() {
 		return "Appreciate [id=" + id + ", img_url=" + img_url + ", content=" + content + ", detail_url=" + detail_url
-				+ ", type=" + type + ", minor=" + minor + ", view_count=" + view_count + "]";
+				+ ", type=" + type + ", minor=" + minor + ", view_count=" + view_count + ", museum_name=" + museum_name
+				+ "]";
 	}
 	
 	

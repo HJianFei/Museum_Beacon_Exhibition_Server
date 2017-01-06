@@ -10,6 +10,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.json.annotations.JSON;
 
 import com.hjf.beacon.entity.Museum;
 import com.hjf.beacon.service.MuseumService;
@@ -22,6 +23,7 @@ public class MuseumAction {
 	@Resource(name = "MuseumService")
 	private MuseumService museumService;
 	HttpServletRequest request = ServletActionContext.getRequest();
+	List<String>types=new ArrayList<>();
 
 	public String save() {
 		String[] split = museum.getType().split(",");
@@ -31,14 +33,14 @@ public class MuseumAction {
 		}
 		museum.setType(list.toString());
 		museumService.save(museum);
-		getAllMuseumWeb();
+		listAllMuseumWeb();
 		return "museums";
 	}
 
 	public String delete() {
 		int id = Integer.parseInt(request.getParameter("id"));
 		museumService.delete(Museum.class, id);
-		getAllMuseumWeb();
+		listAllMuseumWeb();
 		return "museums";
 	}
 
@@ -57,13 +59,26 @@ public class MuseumAction {
 		} else {
 			museum.setType("["+museum.getType()+"]");
 			museumService.merge(museum);
-			getAllMuseumWeb();
+			listAllMuseumWeb();
 			return "museums";
 		}
-		
+
 	}
 
-	public String getAllMuseumWeb() {
+	public String listType() {
+		String museum = request.getParameter("museum");
+		String hql="from Museum where museum_name='"+museum+"'";
+		List<Museum> list = museumService.getResult(hql, 0, 0);
+		String type = list.get(0).getType();
+		String substring = type.substring(1, type.length()-1);
+		String[] split = substring.split(",");
+		for (String string : split) {
+			types.add(string);
+		}
+		return "types";
+	}
+
+	public String listAllMuseumWeb() {
 
 		int pageSize = 3; // 每页显示记录条数
 		int pageNow = 1; // 初始化页数
@@ -108,7 +123,7 @@ public class MuseumAction {
 		return "museums";
 	}
 
-	public String getAllMuseum() {
+	public String listAllMuseum() {
 		List<Museum> museums = new ArrayList<Museum>();
 		int page = Integer.parseInt(request.getParameter("page"));
 		String search_condition = request.getParameter("search_condition");
@@ -155,6 +170,7 @@ public class MuseumAction {
 		return null;
 	}
 
+	 @JSON(serialize=false)
 	public Museum getMuseum() {
 		return museum;
 	}
@@ -162,4 +178,13 @@ public class MuseumAction {
 	public void setMuseum(Museum museum) {
 		this.museum = museum;
 	}
+	
+	public List<String> getTypes() {
+		return types;
+	}
+
+	public void setTypes(List<String> types) {
+		this.types = types;
+	}
+
 }
